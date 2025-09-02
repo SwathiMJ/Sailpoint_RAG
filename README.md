@@ -29,25 +29,26 @@ Finding accurate information in large technical documents is slow and inefficien
 ##  Project Structure
 
           ┌─────────────┐
-          │   User UI   │ (Streamlit Chat)
+          │   User UI   │
+          │ (Chat Input)│
           └──────┬──────┘
                  │  Query
                  ▼
         ┌──────────────────┐
-        │   ChromaDB        │
-        │ (Vector Storage)  │
+        │    ChromaDB      │
+        │ (Vector Storage) │
         └──────┬───────────┘
-               │  Relevant Docs
+               │ Relevant Docs
                ▼
-   ┌─────────────────────────┐
-   │ HuggingFace Embeddings  │
-   │ (Contextual Retrieval)  │
-   └──────────┬─────────────┘
-              │  Retrieved Context
+    ┌─────────────────────────┐
+    │ HuggingFace Embeddings  │
+    │ (Contextual Retrieval)  │
+    └──────────┬─────────────┘
+              │ Retrieved Context
               ▼
        ┌───────────────────┐
        │   ChatGroq LLM    │
-       │ (Llama-3.1-8B)    │
+       │  (Llama-3.1-8B)   │
        └─────────┬─────────┘
                  │  Answer
                  ▼
@@ -55,4 +56,5 @@ Finding accurate information in large technical documents is slow and inefficien
           │   User UI   │
           │ (Final Ans) │
           └─────────────┘
+
 
