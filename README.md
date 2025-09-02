@@ -2,6 +2,7 @@
 
 This project leverages Retrieval-Augmented Generation (RAG) to provide quick, accurate, and context-aware answers from SailPoint PDF documents.
 By combining HuggingFace embeddings, ChromaDB, and ChatGroq LLM (Llama 3.1-8B), the system ensures efficient document parsing, privacy-preserving search, and reliable summarization.
+<img width="3196" height="1804" alt="image" src="https://github.com/user-attachments/assets/a1ede7a6-728d-4c11-8ac7-e8581bbfad1a" />
 
 ---
  # Documentation
