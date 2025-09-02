@@ -1,51 +1,36 @@
-# RAG - QA
+#  SailPoint Knowledge Bot
 
-This repository contains a Retrieval Augmented Generation (RAG) application. This application allows you to ingest data and then interact with it through a user-friendly interface.
+An intelligent **RAG-powered knowledge assistant** built with **LangChain, LangGraph, Streamlit, and ChromaDB**.  
+The bot ingests PDF documents, indexes them with embeddings, and enables **chat-based academic/technical Q&A** with source references.
 
-## Prerequisites
+---
 
-In this project I have used `uv` to install, please feel free to use any package manager to install.
+## Problem Statement
 
-### Install uv (Python package manager):
+Finding accurate information in large technical documents is slow and inefficient with traditional search. The challenge is to build a RAG-powered Knowledge Bot that ingests PDFs, retrieves relevant context, and delivers concise, source-backed answers through an interactive chat interface.
 
-`curl -LsSf https://astral.sh/uv/install.sh | sh`
+##  Features
+- Upload and index PDFs into **ChromaDB** with multilingual embeddings (`intfloat/multilingual-e5-large`).
+- Context-aware **question answering** using **Groq’s Llama-3.1-8B-Instant**.
+- Multi-session memory with LangGraph.
+-  Streamlit-based interactive UI for chatting with documents.
+- Privacy-conscious retrieval pipeline.
 
-### Verify the installation:
+---
 
-`uv --version`
+## Tech Stack
+- **Frameworks**: [LangChain](https://www.langchain.com/), [LangGraph](https://github.com/langchain-ai/langgraph), [Streamlit](https://streamlit.io/)
+- **Vector DB**: [Chroma](https://www.trychroma.com/)
+- **Models**: HuggingFace embeddings + Groq Chat Models
+- **Storage**: Local persistent ChromaDB
 
+---
 
-## Environment Setup
+##  Project Structure
 
-### Create a Virual Environment
-
-`uv venv`
-
-#### Activate the environment
-
-`source .venv/bin/activate`
-
-#### Install Dependencies
-
-`uv sync`
-
-## Running the Application
-
-### 1. Data Ingestion
-
-Run the data ingestion script to prepare your data:
-`uv run ingest.py`
-
-### 2. Start the Application
-
-Add your Groq API key in the .env file
-Launch the Streamlit application:
-`uv run streamlit run app.py`
-
-## Note:
-
-- Make sure you have the required data files in place before running the ingestion script and change the `config.py` accordingly.
-- The application will be available in your browser once Streamlit starts.
-- To deactivate the virtual environment simply run `deactivate`.
-"# Sailpoint_RAG" 
-"# Sailpoint_RAG" 
+├── app.py # Streamlit frontend (chat interface)
+├── ingest.py # PDF ingestion & chunking pipeline
+├── config.py # Centralized configuration
+├── data/ # Place PDFs here
+├── docs/chroma/ # ChromaDB persistence
+└── README.md
