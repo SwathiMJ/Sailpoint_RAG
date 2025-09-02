@@ -14,9 +14,6 @@ In this project I have used `uv` to install, please feel free to use any package
 
 `uv --version`
 
-## Clone the repository or Download as zip file
-
-`git clone https://github.com/akash-balakrishnan-22/RAG.git`
 
 ## Environment Setup
 
