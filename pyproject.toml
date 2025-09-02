@@ -1,0 +1,34 @@
+[project]
+name = "rag-series"
+version = "0.1.0"
+description = "RAG workflow for Product Sailpoint PDFs with LangGraph + Chroma + ChatGroq"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    # Core RAG / LLM
+    "langchain>=0.3.25",
+    "langchain-community>=0.3.24",
+    "langchain-groq>=0.3.2",
+    "langgraph>=0.4.7",
+    "groq>=0.26.0",
+
+    # Vector store & embeddings
+    "chromadb>=1.0.12",
+    "sentence-transformers>=4.1.0",
+    "huggingface-hub>=0.16.5",
+
+    # PDF / audio handling
+    "pypdf>=5.6.0",
+    "pydub>=0.25.1",
+    "faster-whisper>=1.1.1",
+
+    # Utilities
+    "streamlit>=1.45.1",
+    "python-dotenv>=1.0.0",
+    "pandas>=2.1.0",
+    "tiktoken>=0.9.0",
+    "transformers>=4.52.4",
+    "yt-dlp>=2025.5.22",
+    "tqdm>=4.66.1"
+]
