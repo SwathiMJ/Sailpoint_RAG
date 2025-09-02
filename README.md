@@ -39,20 +39,5 @@ Finding accurate information in large technical documents is slow and inefficien
         └──────┬───────────┘
                │  Relevant Docs
                ▼
-   ┌─────────────────────────┐
-   │ HuggingFace Embeddings  │
-   │ (Contextual Retrieval)  │
-   └──────────┬─────────────┘
-              │  Retrieved Context
-              ▼
-       ┌───────────────────┐
-       │   ChatGroq LLM    │
-       │ (Llama-3.1-8B)    │
-       └─────────┬─────────┘
-                 │  Answer
-                 ▼
-          ┌─────────────┐
-          │   User UI   │
-          │ (Final Ans) │
-          └─────────────┘
+  
 
