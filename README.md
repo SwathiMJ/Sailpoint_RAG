@@ -28,9 +28,31 @@ Finding accurate information in large technical documents is slow and inefficien
 
 ##  Project Structure
 
-├── app.py # Streamlit frontend (chat interface)
-├── ingest.py # PDF ingestion & chunking pipeline
-├── config.py # Centralized configuration
-├── data/ # Place PDFs here
-├── docs/chroma/ # ChromaDB persistence
-└── README.md
+          ┌─────────────┐
+          │   User UI   │ (Streamlit Chat)
+          └──────┬──────┘
+                 │  Query
+                 ▼
+        ┌──────────────────┐
+        │   ChromaDB        │
+        │ (Vector Storage)  │
+        └──────┬───────────┘
+               │  Relevant Docs
+               ▼
+   ┌─────────────────────────┐
+   │ HuggingFace Embeddings  │
+   │ (Contextual Retrieval)  │
+   └──────────┬─────────────┘
+              │  Retrieved Context
+              ▼
+       ┌───────────────────┐
+       │   ChatGroq LLM    │
+       │ (Llama-3.1-8B)    │
+       └─────────┬─────────┘
+                 │  Answer
+                 ▼
+          ┌─────────────┐
+          │   User UI   │
+          │ (Final Ans) │
+          └─────────────┘
+
